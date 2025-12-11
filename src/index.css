@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Superia Cars Knowledge & Training Center Design System 
+All colors MUST be HSL. Professional automotive brand identity.
+*/
+
+@layer base {
+  :root {
+    /* Core Superia brand colors */
+    --background: 0 0% 100%;
+    --foreground: 210 22% 22%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 22% 22%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 22% 22%;
+
+    /* Superia Dark Theme */
+    --primary: 240 14% 7%; /* Dark hexagonal #11111f */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 240 14% 15%;
+    --primary-glow: 240 14% 20%;
+
+    /* Professional secondary colors */
+    --secondary: 210 20% 95%;
+    --secondary-foreground: 210 22% 22%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 210 15% 55%;
+
+    --accent: 45 100% 55%; /* Warm accent for CTAs */
+    --accent-foreground: 210 22% 22%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
+    --ring: 196 100% 36%;
+
+    /* Training center specific colors */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 90% 55%;
+    --warning-foreground: 210 22% 22%;
+    --info: 213 90% 65%;
+    --info-foreground: 0 0% 100%;
+
+    /* Button colors */
+    --button-teal: 191 89% 39%; /* #069fb7 */
+    --button-teal-foreground: 0 0% 100%;
+    --button-green: 75 68% 36%; /* #6C910D */  
+    --button-green-foreground: 0 0% 100%;
+    --button-red: 0 73% 59%; /* #EF4343 */
+    --button-red-foreground: 0 0% 100%;
+    --purchase-green: 83 48% 44%; /* #7ea536 */
+    --purchase-green-foreground: 0 0% 100%;
+
+    /* Icon and progress colors */
+    --icon-primary: 191 89% 39%; /* #069fb7 blue for all icons */
+    --progress-primary: 191 89% 39%; /* #069fb7 blue for progress bars */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(196 100% 45%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px hsl(var(--primary) / 0.1);
+    --shadow-md: 0 4px 12px hsl(var(--primary) / 0.15);
+    --shadow-lg: 0 8px 25px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 22% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 210 22% 10%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 210 22% 10%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 196 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 196 100% 25%;
+    --primary-glow: 196 100% 60%;
+
+    --secondary: 210 22% 15%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 210 22% 15%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 45 90% 60%;
+    --accent-foreground: 210 22% 8%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 22% 20%;
+    --input: 210 22% 15%;
+    --ring: 196 100% 45%;
+
+    --success: 142 60% 50%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 80% 60%;
+    --warning-foreground: 210 22% 8%;
+    --info: 213 80% 70%;
+    --info-foreground: 210 22% 8%;
+
+    /* Button colors */
+    --button-teal: 191 89% 50%; /* Lighter teal for dark mode */
+    --button-teal-foreground: 0 0% 100%;
+    --button-green: 75 68% 45%; /* Lighter green for dark mode */
+    --button-green-foreground: 0 0% 100%;
+    --button-red: 0 73% 65%; /* Lighter red for dark mode */
+    --button-red-foreground: 0 0% 100%;
+    --purchase-green: 83 48% 50%; /* Lighter green for dark mode */
+    --purchase-green-foreground: 0 0% 100%;
+
+    /* Icon and progress colors */
+    --icon-primary: 191 89% 50%; /* Lighter blue for dark mode icons */
+    --progress-primary: 191 89% 50%; /* Lighter blue for dark mode progress bars */
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(196 100% 55%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(210 22% 12%) 0%, hsl(210 22% 8%) 100%);
+
+    --shadow-sm: 0 1px 3px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 12px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 8px 25px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Apply blue color to icons generally */
+  svg {
+    @apply text-icon-primary;
+  }
+  
+  /* Icons within buttons should inherit button text color (override above) */
+  button svg,
+  a svg {
+    color: inherit !important;
+  }
+}

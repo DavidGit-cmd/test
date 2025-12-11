@@ -1,0 +1,7 @@
+project_id = "crkppkvgrngsjovcfglq"
+
+[functions.fetch-finn-listing]
+verify_jwt = false
+
+[functions.extract-equipment-from-image]
+verify_jwt = false
